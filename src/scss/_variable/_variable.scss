@@ -1,0 +1,62 @@
+@import "../_function/function";
+
+////
+/// @group  Variable
+////
+
+///
+/// @name   object
+///
+
+// Open Sans - OS
+// Proxima Nova Soft - PNS
+
+$object : (
+	color : (
+		white             : #FFF,
+		black             : #000,
+		nero              : #191919,
+		light-grey        : #d5d5d5,
+		azure		      : #f5f6f6,
+		aqua		      : #00e4ff,
+		prussian-blue     : #03325f,
+		venice-blue       : #315477
+	),
+
+	fonts : (
+		OS-regular		: "opensans-regular",
+		OS-light		: "opensans-light",
+		OS-bold			: "opensans-bold",
+		OS-semibold		: "opensans-semibold",
+		OS-extrabold	: "opensans-extrabold",
+		PNS-regular		: "proximanovasoft-regular",
+		PNS-medium		: "proximanovasoft-medium",
+		PNS-bold		: "proximanovasoft-bold",
+		PNS-semibold	: "proximanovasoft-semibold"
+	),
+
+	dimension : (
+		all       : 100%
+	),
+);
+
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-black            : return-value(color, black);
+$c-nero             : return-value(color, nero);
+$c-light-grey       : return-value(color, light-grey);
+$c-azure	        : return-value(color, azure);
+$c-aqua		        : return-value(color, aqua);
+$c-prussian-blue    : return-value(color, prussian-blue);
+$c-venice-blue	    : return-value(color, venice-blue);
+
+$OS-regular			: return-value(fonts, OS-regular);
+$OS-light			: return-value(fonts, OS-light);
+$OS-bold			: return-value(fonts, OS-bold);
+$OS-semibold		: return-value(fonts, OS-semibold);
+$OS-extrabold		: return-value(fonts, OS-extrabold);
+$PNS-regular		: return-value(fonts, PNS-regular);
+$PNS-medium			: return-value(fonts, PNS-medium);
+$PNS-bold			: return-value(fonts, PNS-bold);
+$PNS-semibold		: return-value(fonts, PNS-semibold);

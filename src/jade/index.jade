@@ -1,0 +1,24 @@
+include _mixin/mixin
+include _mixin/macrosMixin
+
+
+doctype html
+html(
+    lang="en",
+    class="js")
+
+
+    +headSite("ExpertCollege", linkSite.styleLinkIndex, "")
+
+
+    body
+
+        include _template/header
+
+        main.main
+
+        include _template/footer
+
+
+    - for(var i = 0; i < linkSite.scriptLink.length; i++)
+        script(src= linkSite.scriptLink[i])

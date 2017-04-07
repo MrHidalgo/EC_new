@@ -1,0 +1,71 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+///
+/// NAV
+///
+.nav {
+  position: relative;
+  @include mixinDimensions($w-all, 67px);
+
+
+  &_bgColor,
+  &_bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mixinDimensions($w-all);
+  }
+
+
+  &_bgColor {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5), inset 0 3px 0 0 rgba(255, 255, 255, 0.2);
+    background: rgb(24,153,200);
+    background: -moz-linear-gradient(top,  rgba(24,153,200,1) 1%, rgba(12,78,146,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(24,153,200,1) 1%,rgba(12,78,146,1) 100%);
+    background: linear-gradient(to bottom,  rgba(24,153,200,1) 1%,rgba(12,78,146,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1899c8', endColorstr='#0c4e92',GradientType=0 );
+  }
+
+
+  &_bgImage {
+    opacity: 0.15;
+    background-image: url("../image/img-pattern-overlay.png");
+    background-repeat: repeat;
+    background-position: top left;
+  }
+
+
+  &_row {
+    float: left;
+    padding-left: 330px;
+    text-align: center;
+  }
+
+
+  &__btn {
+    float: left;
+    position: relative;
+    @include mixinDimensions(185px, 67px);
+    line-height: 67px;
+    color: $c-white;
+    font: {
+      size: 14px;
+      family: $PNS-bold;
+    };
+    letter-spacing: .5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.39);
+
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: (67px - 38) / 2;
+      right: -1px;
+      @include mixinDimensions(1px, 38px);
+      background-color: rgba($c-white, .4);
+    }
+  }
+}

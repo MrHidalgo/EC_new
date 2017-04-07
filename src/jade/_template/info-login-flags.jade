@@ -1,0 +1,34 @@
+
+.info
+    div(
+        class="clearfix"
+        role="group"
+    )
+        a(
+            href="javascript:void(0);"
+            class="btn__login"
+        )!= "REGISTER"
+
+        .info__row
+            a(
+                href="javascript:void(0);"
+                id="btnGroupDrop1"
+                class="btn__flags"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+            )
+                i.btn__flags-icon
+
+            .dropdown-menu
+                a(
+                    href="javascript:void(0);"
+                    class="btn__drop"
+                )
+                    span!= "English"
+                a(
+                    href="javascript:void(0);"
+                    class="btn__drop"
+                )
+                    span!= "Dutch"
+

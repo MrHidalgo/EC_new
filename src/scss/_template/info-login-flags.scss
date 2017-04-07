@@ -1,0 +1,120 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+///
+/// INFO
+///
+.info {
+  float: right;
+  position: relative;
+  min-width: 160px;
+  height: 40px;
+  margin-top: (67px - 40) / 2;
+  border-radius: 2em;
+  box-shadow: inset 0.643px 0.766px 2px 0 rgba(1, 2, 2, 0.63);
+  background: rgb(18,69,109);
+  background: -moz-linear-gradient(top,  rgba(18,69,109,1) 0%, rgba(18,69,109,1) 50%, rgba(3,51,95,1) 50%, rgba(3,51,95,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(18,69,109,1) 0%,rgba(18,69,109,1) 50%,rgba(3,51,95,1) 50%,rgba(3,51,95,1) 100%);
+  background: linear-gradient(to bottom,  rgba(18,69,109,1) 0%,rgba(18,69,109,1) 50%,rgba(3,51,95,1) 50%,rgba(3,51,95,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12456d', endColorstr='#03335f',GradientType=0 );
+
+
+  &__row {
+    float: right;
+    width: 70px;
+    text-align: center;
+  }
+}
+
+.btn {
+  &__login,
+  &__flags {
+    color: $c-white;
+    height: 40px;
+    text-align: center;
+
+
+    &:after {
+      content: "";
+    }
+  }
+
+
+  &__login {
+    float: left;
+    position: relative;
+    min-width: (160px - 70);
+    line-height: 40px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    };
+    font: {
+      size: 14px;
+      family: $PNS-bold;
+    };
+    letter-spacing: .5px;
+
+
+    &::after {
+      position: absolute;
+      top: (40px - 19) / 2;
+      right: 0;
+      @include mixinDimensions(1px, 19px);
+      background-color: rgba($c-white, .25);
+    }
+  }
+
+
+  &__flags {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+
+
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -4px;
+      margin-left: 10px;
+      border-top: .3em solid;
+      border-right: .3em solid transparent;
+      border-left: .3em solid transparent;
+    }
+
+
+    &-icon {
+      display: inline-block;
+      margin-top: (40px - 16) / 2;
+      @include retina-sprite($sp-i-flags-group);
+    }
+  }
+
+
+  &__drop {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    };
+    text-align: right;
+    color: $c-prussian-blue;
+    font: {
+      size: 15px;
+      family: $PNS-bold;
+    };
+  }
+}
+
+.dropdown-menu {
+  left: auto;
+  right: 0;
+  min-width: 0;
+}

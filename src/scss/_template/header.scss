@@ -1,0 +1,31 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+
+@import "logotype";
+@import "nav";
+@import "info-login-flags";
+///
+/// HEADER
+///
+.header {
+  height: 102px;
+
+
+  &_top {
+    @include mixinDimensions($w-all, 30px);
+    background-color: $c-azure;
+
+
+    &+.container {
+      z-index: 10;
+    }
+  }
+
+  &_bottom {
+    @include mixinDimensions($w-all, 5px);
+    background-color: $c-aqua;
+  }
+}

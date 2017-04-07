@@ -1,0 +1,20 @@
+///
+/// IMPORT FILES
+///
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+@import "../_variable/sprite";
+
+@import "copyright";
+@import "social";
+///
+/// FOOTER
+///
+.footer {
+  @include mixinDimensions($w-all, 71px);
+  background: rgb(61,61,61);
+  background: -moz-linear-gradient(top, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(61,61,61,1) 0%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(61,61,61,1) 0%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#000000',GradientType=0 );
+}

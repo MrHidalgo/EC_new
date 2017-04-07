@@ -1,0 +1,16 @@
+-
+    var navArr = [
+        "CONTACT",
+        "MY PROFILE",
+        "CONTACT"
+    ];
+
+
+
+.nav_row.clearfix
+    -for(var i = 0; i < navArr.length; i++)
+        a(
+            href="javascript:void(0);"
+            title=navArr[i]
+            class="nav__btn"
+        )!= navArr[i]
