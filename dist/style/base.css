@@ -54,15 +54,55 @@ body {
 
 
 .main {
-  height: -webkit-calc(100% - (102px + 71px));
-  height: calc(100% - (102px + 71px));
   min-height: -webkit-calc(100% - (102px + 71px));
   min-height: calc(100% - (102px + 71px));
   background-color: #315477;
   background-image: url("../image/img-login-bg.png");
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: top center;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 
+.main > .container-fluid {
+  height: 100%;
+}
+
+
+.btn__select {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-family: "opensans-bold";
+  text-shadow: none;
+}
+
+
+.btn__select-text {
+  opacity: .5;
+  text-align: left;
+}
+
+
+.btn__select-caret--wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45px;
+  height: 100%;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}

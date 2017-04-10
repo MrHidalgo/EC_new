@@ -1,0 +1,74 @@
+
+.panel.panel-default.panel_custom.panel_small
+    .panel-heading
+        != "Log In"
+
+    .panel-body
+        form(
+            id="loginform"
+            name="loginForm"
+            role="form"
+            class="form-horizontal col-xs-offset-1 col-xs-10"
+        )
+            .form-group
+                .input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-user
+                    input(
+                        id="login-username"
+                        autocomplete="on"
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Input your e-mail"
+                        required
+                    )
+            .form-group
+                .input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-lock
+                    input(
+                        id="login-password"
+                        autocomplete="off"
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Input your password"
+                        required
+                    )
+
+            .form-group
+                .btn-group.btn-group_select
+                    button(
+                        type="button"
+                        class="btn btn-default btn__select dropdown-toggle"
+                        data-toggle="dropdown"
+                    )
+                        span.btn__select-text.disabled!= "Selecteer type account"
+                        span(
+                            class="btn__select-caret--wrap "
+                        )
+                            span.caret
+
+                    ul.dropdown-menu.dropdown-menu_full
+                        -for(var i = 0; i < 5; i++)
+                            li
+                                a(
+                                    href="javascript:void(0);"
+                                    title=""
+                                    class=""
+                                )!= i
+
+
+            .form-group.form-group_margin
+                button(
+                    type="button"
+                    class="btn btn-block btn-primary"
+                )!= "Login"
+
+    .panel-footer.text-center
+        a(
+            href="#"
+            title="Forgot password?"
+            class="btn-link btn__forgot"
+        )!= "Forgot password?"

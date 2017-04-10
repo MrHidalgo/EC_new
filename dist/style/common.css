@@ -133,9 +133,9 @@
   line-height: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "proximanovasoft-bold";
-  letter-spacing: .5px;
+  letter-spacing: .6px;
 }
 
 
@@ -335,5 +335,3 @@
   background: linear-gradient(to bottom, #3d3d3d 0%, black 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#000000',GradientType=0 );
 }
-
-

@@ -59,14 +59,52 @@ body {
 /// MAIN
 ///
 .main {
-  height: calc(100% - (102px + 71px));
+  //height: calc(100% - (102px + 71px));
   min-height: calc(100% - (102px + 71px));
   background-color: $c-venice-blue;
   background-image: url("../image/img-login-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  >.container-fluid {
+    height: 100%;
+  }
 }
 ///
+/// BTN DOP INFO
 ///
-///
+.btn {
+  &__select {
+    position: relative;
+    width: 100%;
+    font: {
+      size: 14px;
+      family: $OS-bold;
+    };
+    text-shadow: none;
+
+
+    &-text {
+      opacity: .5;
+      text-align: left;
+    }
+
+
+    &-caret {
+      &--wrap {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include mixinDimensions(45px, $w-all);
+        text-align: center;
+        border-left: 1px solid #ccc;
+      }
+    }
+  }
+}

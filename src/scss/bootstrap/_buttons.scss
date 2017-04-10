@@ -1,0 +1,227 @@
+@import "../_mixin/mixin";
+@import "../_variable/variable";
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+
+  $btn-family-base: $OS-bold;
+  font: {
+    weight: $btn-font-weight;
+    family: $btn-family-base;
+  }
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+
+  $height-base-size: 50px;
+  $padding-base-vertical: 0;
+  $font-size-base: 18px;
+  $line-height-base: 46px;
+  $btn-border-radius-base: 5px;
+  @include button-size($height-base-size, $padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+  // our
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.19), inset 0 2px 0 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.39);
+  transition: .25s ease-in-out;
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mixinDimensions($w-all);
+    opacity: 0.15;
+    background-image: url("../image/img-pattern-overlay.png");
+    background-repeat: repeat;
+    background-position: top left;
+  }
+
+
+  &__select {
+    text-align: left;
+    box-shadow: none;
+    width: 100%;
+    color: $c-lynch;
+    border-top-right-radius: $btn-border-radius-base !important;
+    border-bottom-right-radius: $btn-border-radius-base !important;
+  }
+
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      //@include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    //color: $btn-default-color;
+    //text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    //outline: 0;
+    //background-image: none;
+    //@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  // [converter] extracted a& to a.btn
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  $btn-default-bg-start : rgb(239,239,241);
+  $btn-default-bg-end : darken(rgb(239,239,241), 20%);
+  @include button-variant($btn-default-color, $btn-default-bg-start, $btn-default-bg-end, $btn-default-border);
+}
+.btn-primary {
+  $btn-primary-bg-start : rgb(2, 169, 215);
+  $btn-primary-bg-end : rgb(12,78,146);
+  @include button-variant($btn-primary-color, $btn-primary-bg-start, $btn-primary-bg-end, $btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  $btn-success-bg-start : $btn-success-bg;
+  $btn-success-bg-end : darken($btn-success-bg, 20%);
+  @include button-variant($btn-success-color, $btn-success-bg-start, $btn-success-bg-end, $btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  $btn-info-bg-start : $btn-info-bg;
+  $btn-info-bg-end : darken($btn-info-bg, 20%);
+  @include button-variant($btn-info-color, $btn-info-bg-start, $btn-info-bg-end, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  $btn-warning-bg-start : $btn-warning-bg;
+  $btn-warning-bg-end : darken($btn-warning-bg, 20%);
+  @include button-variant($btn-warning-color, $btn-warning-bg-start, $btn-warning-bg-end, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  $btn-danger-bg-start : $btn-danger-bg;
+  $btn-danger-bg-end : darken($btn-danger-bg, 20%);
+  @include button-variant($btn-danger-color, $btn-danger-bg-start, $btn-danger-bg-end, $btn-danger-border);
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $link-color;
+  font: {
+    size: 16px;
+    family: $OS-semibold;
+    weight: normal;
+    style: italic;
+  }
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(inherit, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size(inherit, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+.btn-xs {
+  @include button-size(inherit, $padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

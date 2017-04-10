@@ -20,7 +20,8 @@ $object : (
 		azure		      : #f5f6f6,
 		aqua		      : #00e4ff,
 		prussian-blue     : #03325f,
-		venice-blue       : #315477
+		venice-blue       : #315477,
+		lynch		      : #5e768b,
 	),
 
 	fonts : (
@@ -50,6 +51,7 @@ $c-azure	        : return-value(color, azure);
 $c-aqua		        : return-value(color, aqua);
 $c-prussian-blue    : return-value(color, prussian-blue);
 $c-venice-blue	    : return-value(color, venice-blue);
+$c-lynch		    : return-value(color, lynch);
 
 $OS-regular			: return-value(fonts, OS-regular);
 $OS-light			: return-value(fonts, OS-light);
