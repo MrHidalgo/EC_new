@@ -27,23 +27,48 @@
     width: 70px;
     text-align: center;
   }
+
+
+  &__author {
+    float: left;
+    line-height: 40px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+    color: $c-white;
+
+
+    &-name {
+      color: $c-aqua;
+    }
+  }
 }
 
 .btn {
-  &__login,
+  &__logout,
+  &__register,
   &__flags {
     color: $c-white;
     height: 40px;
     text-align: center;
+  }
 
 
+  &__logout,
+  &__register {
+    &:before,
     &:after {
-      content: "";
+      position: absolute;
+      top: (40px - 19) / 2;
+      @include mixinDimensions(1px, 19px);
+      background-color: rgba($c-white, .25);
     }
   }
 
 
-  &__login {
+  &__logout,
+  &__register {
     float: left;
     position: relative;
     min-width: (160px - 70);
@@ -59,12 +84,17 @@
     letter-spacing: .6px;
 
 
-    &::after {
-      position: absolute;
-      top: (40px - 19) / 2;
+    &:after {
+      content: "";
       right: 0;
-      @include mixinDimensions(1px, 19px);
-      background-color: rgba($c-white, .25);
+    }
+  }
+
+
+  &__logout {
+    &:before {
+      content: "";
+      left: 0;
     }
   }
 

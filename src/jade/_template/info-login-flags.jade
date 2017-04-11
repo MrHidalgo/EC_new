@@ -1,13 +1,23 @@
 
+
 .info
     div(
         class="clearfix"
         role="group"
     )
+        if(!boolInfoLoginLang)
+            span.info__author
+                != "Logged in as "
+                a(
+                    href="javascript:void(0);"
+                    title="M van Beijnen, student"
+                    class="info__author-name"
+                )!= "M van Beijnen, student"
+
         a(
             href="javascript:void(0);"
-            class="btn__login"
-        )!= "REGISTER"
+            class= (boolInfoLoginLang) ? "btn__register" : "btn__logout"
+        )!= (boolInfoLoginLang) ? "REGISTER" : "LOGOUT"
 
         .info__row
             a(

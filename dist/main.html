@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>ExpertCollege main</title>
+    <!--link(rel="icon" type="image/png" href="./image/favicon.png")-->
+    <link href="./vendor/css/swiper.css" rel="stylesheet"/>
+    <link href="./style/bootstrap-dist.css" rel="stylesheet"/>
+    <link href="./style/fonts.css" rel="stylesheet"/>
+    <link href="./style/base.css" rel="stylesheet"/>
+    <link href="./style/common.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- HEADER-->
+    <header class="header">
+      <!-- top line gray-->
+      <div class="header_top"></div>
+      <div class="container_fluid container">
+        <div class="logotype"><img src="./image/logotype.png" title="" alt="" class="logotype__img img_responsive"></div>
+      </div>
+      <nav class="nav">
+        <!-- add two block for bg & bg image replay [pattern overlay]-->
+        <div class="nav_bgColor"></div>
+        <div class="nav_bgImage"></div>
+        <div class="container_fluid container clearfix">
+          <div class="nav_row clearfix"><a href="javascript:void(0);" title="CONTACT" class="nav__btn">CONTACT</a><a href="javascript:void(0);" title="MY PROFILE" class="nav__btn">MY PROFILE</a><a href="javascript:void(0);" title="ABOUT" class="nav__btn">ABOUT</a>
+          </div>
+          <div class="info">
+            <div role="group" class="clearfix"><span class="info__author">Logged in as <a href="javascript:void(0);" title="M van Beijnen, student" class="info__author-name">M van Beijnen, student</a></span><a href="javascript:void(0);" class="btn__logout">LOGOUT</a>
+              <div class="info__row"><a href="javascript:void(0);" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn__flags"><i class="btn__flags-icon"></i></a>
+                <div class="dropdown-menu"><a href="javascript:void(0);" class="btn__drop"><span>Dutch</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- bottom line after navigation-->
+      <div class="header_bottom"></div>
+    </header>
+    <!-- MAIN CONTAINER FOR OTHER MODULE-->
+    <main class="main main_main">
+      <div class="swiper-container">
+        <div class="parallax-bg"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="panel panel-default panel_custom panel_small">
+              <div class="panel-heading">Log In
+              </div>
+              <div class="panel-body">
+                <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                      <input id="login-password" autocomplete="off" type="password" name="password" placeholder="Input your password" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group btn-group_select">
+                      <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
+                      <ul class="dropdown-menu dropdown-menu_full">
+                        <li><a href="javascript:void(0);" title="">0</a></li>
+                        <li><a href="javascript:void(0);" title="">1</a></li>
+                        <li><a href="javascript:void(0);" title="">2</a></li>
+                        <li><a href="javascript:void(0);" title="">3</a></li>
+                        <li><a href="javascript:void(0);" title="">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group form-group_margin">
+                    <button type="button" class="btn btn-block btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel-footer text-center"><a href="#" title="Forgot password?" class="btn-link btn__forgot">Forgot password?</a></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="panel panel-default panel_custom panel_small">
+              <div class="panel-heading">Log In
+              </div>
+              <div class="panel-body">
+                <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                      <input id="login-password" autocomplete="off" type="password" name="password" placeholder="Input your password" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group btn-group_select">
+                      <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
+                      <ul class="dropdown-menu dropdown-menu_full">
+                        <li><a href="javascript:void(0);" title="">0</a></li>
+                        <li><a href="javascript:void(0);" title="">1</a></li>
+                        <li><a href="javascript:void(0);" title="">2</a></li>
+                        <li><a href="javascript:void(0);" title="">3</a></li>
+                        <li><a href="javascript:void(0);" title="">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group form-group_margin">
+                    <button type="button" class="btn btn-block btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel-footer text-center"><a href="#" title="Forgot password?" class="btn-link btn__forgot">Forgot password?</a></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="panel panel-default panel_custom panel_small">
+              <div class="panel-heading">Log In
+              </div>
+              <div class="panel-body">
+                <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                      <input id="login-password" autocomplete="off" type="password" name="password" placeholder="Input your password" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group btn-group_select">
+                      <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
+                      <ul class="dropdown-menu dropdown-menu_full">
+                        <li><a href="javascript:void(0);" title="">0</a></li>
+                        <li><a href="javascript:void(0);" title="">1</a></li>
+                        <li><a href="javascript:void(0);" title="">2</a></li>
+                        <li><a href="javascript:void(0);" title="">3</a></li>
+                        <li><a href="javascript:void(0);" title="">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group form-group_margin">
+                    <button type="button" class="btn btn-block btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel-footer text-center"><a href="#" title="Forgot password?" class="btn-link btn__forgot">Forgot password?</a></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="panel panel-default panel_custom panel_small">
+              <div class="panel-heading">Log In
+              </div>
+              <div class="panel-body">
+                <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                      <input id="login-password" autocomplete="off" type="password" name="password" placeholder="Input your password" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group btn-group_select">
+                      <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
+                      <ul class="dropdown-menu dropdown-menu_full">
+                        <li><a href="javascript:void(0);" title="">0</a></li>
+                        <li><a href="javascript:void(0);" title="">1</a></li>
+                        <li><a href="javascript:void(0);" title="">2</a></li>
+                        <li><a href="javascript:void(0);" title="">3</a></li>
+                        <li><a href="javascript:void(0);" title="">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group form-group_margin">
+                    <button type="button" class="btn btn-block btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel-footer text-center"><a href="#" title="Forgot password?" class="btn-link btn__forgot">Forgot password?</a></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="panel panel-default panel_custom panel_small">
+              <div class="panel-heading">Log In
+              </div>
+              <div class="panel-body">
+                <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                      <input id="login-password" autocomplete="off" type="password" name="password" placeholder="Input your password" required class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group btn-group_select">
+                      <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
+                      <ul class="dropdown-menu dropdown-menu_full">
+                        <li><a href="javascript:void(0);" title="">0</a></li>
+                        <li><a href="javascript:void(0);" title="">1</a></li>
+                        <li><a href="javascript:void(0);" title="">2</a></li>
+                        <li><a href="javascript:void(0);" title="">3</a></li>
+                        <li><a href="javascript:void(0);" title="">4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group form-group_margin">
+                    <button type="button" class="btn btn-block btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel-footer text-center"><a href="#" title="Forgot password?" class="btn-link btn__forgot">Forgot password?</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"><span class="swiper-button-prev__text">Year Matrix</span></div>
+        <div class="swiper-button-next"><span class="swiper-button-next__text">EPA</span></div>
+      </div>
+    </main>
+    <!-- FOOTER-->
+    <footer class="footer">
+      <div class="container_fluid container clearfix">
+        <div class="copyright">
+          <p class="copyright__text">&copy;&nbsp;EXPERTCOLLEGE 2017&nbsp;&nbsp;|&nbsp;&nbsp;ALLE RECHTEN VOORBEHOUDEN&nbsp;&nbsp;|&nbsp;&nbsp;DISCLAIMER</p>
+        </div>
+        <div class="social"><a href="javascript:void(0);" title="fb" class="social__icon social__icon-fb"></a><a href="javascript:void(0);" title="tw" class="social__icon social__icon-tw"></a><a href="javascript:void(0);" title="gp" class="social__icon social__icon-gp"></a><a href="javascript:void(0);" title="l" class="social__icon social__icon-l"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./vendor/js/jquery-1.11.1.min.js"></script>
+  <script src="./vendor/js/bootstrap.min.js"></script>
+  <script src="./vendor/js/swiper.min.js"></script>
+  <script src="./vendor/js/swiper.jquery.min.js"></script>
+  <script src="./script/main.js"></script>
+</html>

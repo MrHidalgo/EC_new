@@ -16,26 +16,30 @@
   &.focus {
     outline: none;
     color: $color;
-    background-color: lighten($background-end, 15%);
+    //background-color: lighten($background-end, 15%);
+    background-color: $background-end;
         border-color: darken($border, 12%);
   }
   &:hover {
     color: $color;
-    background-color: lighten($background-end, 15%);
+    //background-color: lighten($background-end, 15%);
+    background-color: $background-end;
         border-color: darken($border, 12%);
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
-    background-color: lighten($background-end, 15%);
+    //background-color: lighten($background-end, 15%);
+    background-color: $background-end;
         border-color: darken($border, 12%);
 
     &:hover,
     &:focus,
     &.focus {
       color: $color;
-      background-color: lighten($background-end, 15%);
+      //background-color: lighten($background-end, 15%);
+      background-color: $background-end;
           border-color: darken($border, 25%);
     }
   }

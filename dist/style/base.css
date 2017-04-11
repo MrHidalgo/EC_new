@@ -56,12 +56,10 @@ body {
 .main {
   min-height: -webkit-calc(100% - (102px + 71px));
   min-height: calc(100% - (102px + 71px));
-  background-color: #315477;
-  background-image: url("../image/img-login-bg.png");
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+
+.main_login {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,11 +72,178 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #315477;
+  background-image: url("../image/img-login-bg.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.main_main {
+  position: relative;
+  padding: 100px 70px 70px;
+  background-image: url("../image/img-main-bg.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+
+
+.main_main:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 
 .main > .container-fluid {
   height: 100%;
+}
+
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  background-image: url(../image/sprite.png);
+  background-position: -87px 0px;
+  width: 24px;
+  height: 57px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+  .swiper-button-prev:hover,
+  .swiper-container-rtl .swiper-button-next:hover {
+    background-image: url(../image/sprite.png);
+    background-position: -58px 0px;
+    width: 24px;
+    height: 57px;
+  }
+}
+
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  
+  .swiper-button-prev:hover,
+  .swiper-container-rtl .swiper-button-next:hover {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+
+.swiper-button-prev:active,
+.swiper-container-rtl .swiper-button-next:active {
+  background-image: url(../image/sprite.png);
+  background-position: -58px 0px;
+  width: 24px;
+  height: 57px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .swiper-button-prev:active,
+  .swiper-container-rtl .swiper-button-next:active {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-image: url(../image/sprite.png);
+  background-position: -29px 0px;
+  width: 24px;
+  height: 57px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+  .swiper-button-next:hover,
+  .swiper-container-rtl .swiper-button-prev:hover {
+    background-image: url(../image/sprite.png);
+    background-position: 0px 0px;
+    width: 24px;
+    height: 57px;
+  }
+}
+
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  
+  .swiper-button-next:hover,
+  .swiper-container-rtl .swiper-button-prev:hover {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+
+.swiper-button-next:active,
+.swiper-container-rtl .swiper-button-prev:active {
+  background-image: url(../image/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 57px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .swiper-button-next:active,
+  .swiper-container-rtl .swiper-button-prev:active {
+    background-image: url(../image/sprite@2x.png);
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
+  }
+}
+
+
+.swiper-button-prev__text,
+.swiper-button-next__text {
+  position: absolute;
+  top: 15px;
+  white-space: nowrap;
+  font-size: 18px;
+  font-family: "proximanovasoft-semibold";
+  color: #03325f;
+  text-transform: uppercase;
+}
+
+
+.swiper-button-prev__text {
+  left: 24px;
+}
+
+
+.swiper-button-next__text {
+  right: 24px;
 }
 
 

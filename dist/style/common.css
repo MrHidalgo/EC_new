@@ -114,19 +114,37 @@
 }
 
 
-.btn__login, .btn__flags {
+.info__author {
+  float: left;
+  line-height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFF;
+}
+
+
+.info__author-name {
+  color: #00e4ff;
+}
+
+
+.btn__logout, .btn__register, .btn__flags {
   color: #FFF;
   height: 40px;
   text-align: center;
 }
 
 
-.btn__login:after, .btn__flags:after {
-  content: "";
+.btn__logout:before, .btn__logout:after, .btn__register:before, .btn__register:after {
+  position: absolute;
+  top: 10.5px;
+  width: 1px;
+  height: 19px;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 
-.btn__login {
+.btn__logout, .btn__register {
   float: left;
   position: relative;
   min-width: 90px;
@@ -139,13 +157,15 @@
 }
 
 
-.btn__login::after {
-  position: absolute;
-  top: 10.5px;
+.btn__logout:after, .btn__register:after {
+  content: "";
   right: 0;
-  width: 1px;
-  height: 19px;
-  background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.btn__logout:before {
+  content: "";
+  left: 0;
 }
 
 
@@ -173,7 +193,7 @@
   display: inline-block;
   margin-top: 12px;
   background-image: url(../image/sprite.png);
-  background-position: -58px 0px;
+  background-position: 0px -91px;
   width: 24px;
   height: 16px;
 }
@@ -182,8 +202,8 @@
   
   .btn__flags-icon {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 82px 53px;
-            background-size: 82px 53px;
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
   }
 }
 
@@ -260,7 +280,7 @@
 
 .social__icon-fb {
   background-image: url(../image/sprite.png);
-  background-position: 0px 0px;
+  background-position: 0px -62px;
   width: 24px;
   height: 24px;
 }
@@ -269,15 +289,15 @@
   
   .social__icon-fb {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 82px 53px;
-            background-size: 82px 53px;
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
   }
 }
 
 
 .social__icon-tw {
   background-image: url(../image/sprite.png);
-  background-position: -29px -29px;
+  background-position: -87px -62px;
   width: 24px;
   height: 24px;
 }
@@ -286,15 +306,15 @@
   
   .social__icon-tw {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 82px 53px;
-            background-size: 82px 53px;
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
   }
 }
 
 
 .social__icon-gp {
   background-image: url(../image/sprite.png);
-  background-position: -29px 0px;
+  background-position: -29px -62px;
   width: 24px;
   height: 24px;
 }
@@ -303,15 +323,15 @@
   
   .social__icon-gp {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 82px 53px;
-            background-size: 82px 53px;
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
   }
 }
 
 
 .social__icon-l {
   background-image: url(../image/sprite.png);
-  background-position: 0px -29px;
+  background-position: -58px -62px;
   width: 24px;
   height: 24px;
 }
@@ -320,8 +340,8 @@
   
   .social__icon-l {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 82px 53px;
-            background-size: 82px 53px;
+    -webkit-background-size: 111px 107px;
+            background-size: 111px 107px;
   }
 }
 

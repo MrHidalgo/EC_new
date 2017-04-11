@@ -61,19 +61,94 @@ body {
 .main {
   //height: calc(100% - (102px + 71px));
   min-height: calc(100% - (102px + 71px));
-  background-color: $c-venice-blue;
-  background-image: url("../image/img-login-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  &_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-venice-blue;
+    background-image: url("../image/img-login-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  &_main {
+    position: relative;
+    padding: 100px 70px 70px;
+    background-image: url("../image/img-main-bg.png");
+    background-size: cover;
+    background-position: center;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include mixinDimensions($w-all);
+      background-color: rgba($c-white, 0.75);
+    }
+  }
 
 
   >.container-fluid {
     height: 100%;
+  }
+}
+///
+///
+///
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  @include retina-sprite($sp-i-swiper-arr-prev-group);
+  &:hover {
+    @include respond-to(medium-min) {
+      @include retina-sprite($sp-i-swiper-arr-prev-hover-group);
+    }
+  }
+  &:active {
+    @include retina-sprite($sp-i-swiper-arr-prev-hover-group);
+  }
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  @include retina-sprite($sp-i-swiper-arr-next-group);
+  &:hover {
+    @include respond-to(medium-min) {
+      @include retina-sprite($sp-i-swiper-arr-next-hover-group);
+    }
+  }
+  &:active {
+    @include retina-sprite($sp-i-swiper-arr-next-hover-group);
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  &__text {
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    font: {
+      size: 18px;
+      family: $PNS-semibold;
+    };
+    color: $c-prussian-blue;
+    text-transform: uppercase;
+  }
+}
+
+
+.swiper-button-prev {
+  &__text {
+    left: 24px;
+  }
+}
+.swiper-button-next {
+  &__text {
+    right: 24px;
   }
 }
 ///

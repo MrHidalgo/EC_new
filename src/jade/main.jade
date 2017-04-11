@@ -2,7 +2,7 @@ include _mixin/mixin
 include _mixin/macrosMixin
 
 -
-    var boolInfoLoginLang = true;
+    var boolInfoLoginLang = false;
 
 
 doctype html
@@ -11,7 +11,7 @@ html(
     class="js")
 
 
-    +headSite("ExpertCollege login", linkSite.styleLinkIndex, "")
+    +headSite("ExpertCollege main", linkSite.styleLinkIndex, "")
 
 
     body
@@ -20,9 +20,11 @@ html(
         include _template/header
 
         // MAIN CONTAINER FOR OTHER MODULE
-        main.main.main_login
+        main.main.main_main
 
-            include _template/login
+
+            include ./_template/swap
+
 
         // FOOTER
         include _template/footer

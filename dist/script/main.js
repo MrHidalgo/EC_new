@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     /* INIT BOOTSTRAP TOOLTIP */
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
     /* INIT TEXT IN SWAP NEXT/PREV BTN */
