@@ -13,7 +13,7 @@
   display: inline-block;
   margin-bottom: 0; // For input.btn
 
-  $btn-family-base: $OS-bold;
+  $btn-family-base: $f-OS-bold;
   font: {
     weight: $btn-font-weight;
     family: $btn-family-base;
@@ -151,7 +151,7 @@ a.btn {
   color: $link-color;
   font: {
     size: 14px;
-    family: $OS-semibold;
+    family: $f-OS-semibold;
     weight: normal;
     style: italic;
   }

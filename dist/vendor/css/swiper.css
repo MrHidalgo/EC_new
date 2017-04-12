@@ -16,7 +16,7 @@
   margin-left: auto;
   margin-right: auto;
   /*position: relative;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
   /* Fix of Webkit flickering */
   z-index: 1;
 }
@@ -204,12 +204,6 @@
   background-color: rgb(173, 173, 173);
   box-shadow: inset 1.928px 2.298px 5px 0px rgba(67, 67, 67, 0.3);
   transition: .25s ease-in-out;
-}
-.swiper-pagination-bullet:hover {
-  transition: .25s ease-in-out;
-  background-image: -moz-linear-gradient( 90deg, rgb(3,73,144) 0%, rgb(0,162,255) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(3,73,144) 0%, rgb(0,162,255) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(3,73,144) 0%, rgb(0,162,255) 100%);
 }
 button.swiper-pagination-bullet {
   border: none;

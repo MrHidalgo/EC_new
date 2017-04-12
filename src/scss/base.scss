@@ -14,7 +14,7 @@ html {
 }
 body {
   min-height: $w-all;
-  font-family: $PNS-regular;
+  font-family: $f-PN-regular;
 }
 .clearfix {
   *zoom: 1;
@@ -61,6 +61,7 @@ body {
 .main {
   //height: calc(100% - (102px + 71px));
   min-height: calc(100% - (102px + 71px));
+  overflow: hidden;
 
 
   &_login {
@@ -77,7 +78,7 @@ body {
 
   &_main {
     position: relative;
-    padding: 100px 70px 70px;
+    padding: 70px;
     background-image: url("../image/img-main-bg.png");
     background-size: cover;
     background-position: center;
@@ -133,7 +134,7 @@ body {
     white-space: nowrap;
     font: {
       size: 18px;
-      family: $PNS-semibold;
+      family: $f-PN-semibold;
     };
     color: $c-prussian-blue;
     text-transform: uppercase;
@@ -160,7 +161,7 @@ body {
     width: 100%;
     font: {
       size: 14px;
-      family: $OS-bold;
+      family: $f-OS-bold;
     };
     text-shadow: none;
 

@@ -9,7 +9,7 @@
 ///
 
 // Open Sans - OS
-// Proxima Nova Soft - PNS
+// Proxima Nova - PN
 
 $object : (
 	color : (
@@ -22,6 +22,7 @@ $object : (
 		prussian-blue     : #03325f,
 		venice-blue       : #315477,
 		lynch		      : #5e768b,
+		pacific-blue      : #1187C8,
 	),
 
 	fonts : (
@@ -30,10 +31,13 @@ $object : (
 		OS-bold			: "opensans-bold",
 		OS-semibold		: "opensans-semibold",
 		OS-extrabold	: "opensans-extrabold",
-		PNS-regular		: "proximanovasoft-regular",
-		PNS-medium		: "proximanovasoft-medium",
-		PNS-bold		: "proximanovasoft-bold",
-		PNS-semibold	: "proximanovasoft-semibold"
+		PN-thin			: "proxima-nova-thin",
+		PN-light		: "proxima-nova-light",
+		PN-regular		: "proxima-nova-regular",
+		PN-semibold		: "proxima-nova-semibold",
+		PN-bold			: "proxima-nova-bold",
+		PN-extrabold	: "proxima-nova-extrabold",
+		PN-black		: "proxima-nova-black",
 	),
 
 	dimension : (
@@ -52,13 +56,17 @@ $c-aqua		        : return-value(color, aqua);
 $c-prussian-blue    : return-value(color, prussian-blue);
 $c-venice-blue	    : return-value(color, venice-blue);
 $c-lynch		    : return-value(color, lynch);
+$c-pacific-blue	    : return-value(color, pacific-blue);
 
-$OS-regular			: return-value(fonts, OS-regular);
-$OS-light			: return-value(fonts, OS-light);
-$OS-bold			: return-value(fonts, OS-bold);
-$OS-semibold		: return-value(fonts, OS-semibold);
-$OS-extrabold		: return-value(fonts, OS-extrabold);
-$PNS-regular		: return-value(fonts, PNS-regular);
-$PNS-medium			: return-value(fonts, PNS-medium);
-$PNS-bold			: return-value(fonts, PNS-bold);
-$PNS-semibold		: return-value(fonts, PNS-semibold);
+$f-OS-regular		: return-value(fonts, OS-regular);
+$f-OS-light			: return-value(fonts, OS-light);
+$f-OS-bold			: return-value(fonts, OS-bold);
+$f-OS-semibold		: return-value(fonts, OS-semibold);
+$f-OS-extrabold		: return-value(fonts, OS-extrabold);
+$f-PN-thin 			: return-value(fonts, PN-thin);
+$f-PN-light 		: return-value(fonts, PN-light);
+$f-PN-regular 		: return-value(fonts, PN-regular);
+$f-PN-semibold 		: return-value(fonts, PN-semibold);
+$f-PN-bold 			: return-value(fonts, PN-bold);
+$f-PN-extrabold 	: return-value(fonts, PN-extrabold);
+$f-PN-black 		: return-value(fonts, PN-black);

@@ -8,23 +8,51 @@
         div(
             class="swiper-slide"
         )
-            include login
+
+
+            .circle
+                svg(
+                    width="100%" height="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                )
+                    defs
+                        linearGradient(
+                            id="gradientText"
+                            x1="0%" y1="0%" x2="0%" y2="100%"
+                        )
+                            stop(offset="0%" stop-color="#1899c8")
+                            stop(offset="100%" stop-color="#0c4e92")
+                    text(
+                        fill="url(#gradientText)"
+                        x="50%" y="50%"
+                    )
+                        != "ACTIVITY"
+
+                .circle__block.circle__block_0
+                .circle__block.circle__block_1
+                .circle__block.circle__block_2
+                .circle__block.circle__block_3
+                .circle__block.circle__block_4
+                .circle__block.circle__block_5
+                //.circle__block.circle__block_6
+                //.circle__block.circle__block_7
+
         div(
             class="swiper-slide"
         )
-            include login
+
         div(
             class="swiper-slide"
         )
-            include login
+
         div(
             class="swiper-slide"
         )
-            include login
+
         div(
             class="swiper-slide"
         )
-            include login
+
 
     .swiper-pagination
 
