@@ -111,7 +111,7 @@ body {
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background-image: url(../image/sprite.png);
-  background-position: -87px 0px;
+  background-position: -87px -148px;
   width: 24px;
   height: 57px;
 }
@@ -121,8 +121,8 @@ body {
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 
@@ -131,7 +131,7 @@ body {
   .swiper-button-prev:hover,
   .swiper-container-rtl .swiper-button-next:hover {
     background-image: url(../image/sprite.png);
-    background-position: -58px 0px;
+    background-position: -58px -148px;
     width: 24px;
     height: 57px;
   }
@@ -142,8 +142,8 @@ body {
   .swiper-button-prev:hover,
   .swiper-container-rtl .swiper-button-next:hover {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 
@@ -151,7 +151,7 @@ body {
 .swiper-button-prev:active,
 .swiper-container-rtl .swiper-button-next:active {
   background-image: url(../image/sprite.png);
-  background-position: -58px 0px;
+  background-position: -58px -148px;
   width: 24px;
   height: 57px;
 }
@@ -161,8 +161,8 @@ body {
   .swiper-button-prev:active,
   .swiper-container-rtl .swiper-button-next:active {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 
@@ -170,7 +170,7 @@ body {
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background-image: url(../image/sprite.png);
-  background-position: -29px 0px;
+  background-position: -29px -148px;
   width: 24px;
   height: 57px;
 }
@@ -180,8 +180,8 @@ body {
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 
@@ -190,7 +190,7 @@ body {
   .swiper-button-next:hover,
   .swiper-container-rtl .swiper-button-prev:hover {
     background-image: url(../image/sprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -148px;
     width: 24px;
     height: 57px;
   }
@@ -201,8 +201,8 @@ body {
   .swiper-button-next:hover,
   .swiper-container-rtl .swiper-button-prev:hover {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 
@@ -210,7 +210,7 @@ body {
 .swiper-button-next:active,
 .swiper-container-rtl .swiper-button-prev:active {
   background-image: url(../image/sprite.png);
-  background-position: 0px 0px;
+  background-position: 0px -148px;
   width: 24px;
   height: 57px;
 }
@@ -220,8 +220,8 @@ body {
   .swiper-button-next:active,
   .swiper-container-rtl .swiper-button-prev:active {
     background-image: url(../image/sprite@2x.png);
-    -webkit-background-size: 111px 107px;
-            background-size: 111px 107px;
+    -webkit-background-size: 219px 205px;
+            background-size: 219px 205px;
   }
 }
 

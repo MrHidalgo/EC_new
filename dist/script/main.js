@@ -31,7 +31,7 @@ $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    /* INIT TEXT IN SWAP NEXT/PREV BTN */
+    /* INIT TEXT IN SWAP NEXT/PREV BTN  !!!TEST!!! */
     $(".swiper-pagination-bullet").on("click", function(){
         var currentPaginationBtn    = $(this).index(),
             arrLen                  = arrPaginationName.length,

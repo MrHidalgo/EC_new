@@ -23,6 +23,7 @@ $object : (
 		venice-blue       : #315477,
 		lynch		      : #5e768b,
 		pacific-blue      : #1187C8,
+		columbia-blue     : #9adaff,
 	),
 
 	fonts : (
@@ -57,6 +58,7 @@ $c-prussian-blue    : return-value(color, prussian-blue);
 $c-venice-blue	    : return-value(color, venice-blue);
 $c-lynch		    : return-value(color, lynch);
 $c-pacific-blue	    : return-value(color, pacific-blue);
+$c-columbia-blue    : return-value(color, columbia-blue);
 
 $f-OS-regular		: return-value(fonts, OS-regular);
 $f-OS-light			: return-value(fonts, OS-light);
