@@ -8,9 +8,16 @@
 
 
 .nav_row.clearfix
-    -for(var i = 0; i < navArr.length; i++)
-        a(
-            href="javascript:void(0);"
-            title=navArr[i]
-            class="nav__btn"
-        )!= navArr[i]
+    .nav_row--mobile
+        -for(var i = 0; i < navArr.length; i++)
+            a(
+                href="javascript:void(0);"
+                title=navArr[i]
+                class="nav__btn"
+            )!= navArr[i]
+
+    a(
+        href="javascript:void(0);"
+        title="Close menu"
+        class="nav__btn-close btn_close_js"
+    )

@@ -11,10 +11,24 @@ body,
 html {
   width: $w-all;
   height: $w-all;
+
+
+  &.open-menu,
+  &.open-popup {
+    overflow: hidden;
+  }
 }
 body {
   min-height: $w-all;
   font-family: $f-PN-regular;
+}
+@media only screen and(max-width: 1024px) {
+  body.open-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 }
 .clearfix {
   *zoom: 1;

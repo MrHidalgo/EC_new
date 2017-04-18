@@ -6,9 +6,26 @@ html {
 }
 
 
+body.open-menu, body.open-popup,
+html.open-menu,
+html.open-popup {
+  overflow: hidden;
+}
+
+
 body {
   min-height: 100%;
   font-family: "proxima-nova-regular";
+}
+
+@media only screen and (max-width: 1024px) {
+  
+  body.open-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 }
 
 

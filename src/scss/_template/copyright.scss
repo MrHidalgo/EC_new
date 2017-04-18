@@ -9,6 +9,10 @@
 .copyright {
   float: left;
   line-height: 71px;
+  @include respond-to(small-max) {
+    float: none;
+    line-height: normal;
+  }
 
 
   &__text {

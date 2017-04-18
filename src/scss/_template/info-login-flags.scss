@@ -30,6 +30,7 @@
 
 
   &__author {
+    position: relative;
     float: left;
     line-height: 40px;
     padding: {
@@ -39,6 +40,16 @@
     color: $c-white;
 
 
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: (40px - 19) / 2;
+      @include mixinDimensions(1px, 19px);
+      background-color: rgba($c-white, .25);
+    }
+
+
     &-name {
       color: $c-aqua;
     }
@@ -46,6 +57,7 @@
 }
 
 .btn {
+  &__menu,
   &__logout,
   &__register,
   &__flags {
@@ -55,6 +67,7 @@
   }
 
 
+  &__menu,
   &__logout,
   &__register {
     &:before,
@@ -67,6 +80,7 @@
   }
 
 
+  &__menu,
   &__logout,
   &__register {
     float: left;
@@ -82,8 +96,12 @@
       family: $f-PN-bold;
     };
     letter-spacing: .6px;
+  }
 
 
+  &__menu,
+  &__logout,
+  &__register {
     &:after {
       content: "";
       right: 0;
@@ -91,10 +109,10 @@
   }
 
 
-  &__logout {
-    &:before {
-      content: "";
-      left: 0;
+  &__menu {
+    display: none;
+    @include respond-to(hard-max) {
+      display: block;
     }
   }
 

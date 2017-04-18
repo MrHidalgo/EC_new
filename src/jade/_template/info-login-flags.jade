@@ -16,6 +16,13 @@
 
         a(
             href="javascript:void(0);"
+            title="Open menu"
+            class="btn__menu btn_menu_js"
+        )!= "MENU"
+
+        a(
+            href="javascript:void(0);"
+            title!= (boolInfoLoginLang) ? "REGISTER" : "LOGOUT"
             class= (boolInfoLoginLang) ? "btn__register" : "btn__logout"
         )!= (boolInfoLoginLang) ? "REGISTER" : "LOGOUT"
 

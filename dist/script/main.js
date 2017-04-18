@@ -8,6 +8,12 @@ var arrPaginationName = [
 
 $(document).ready(function () {
 
+    /* INIT BOOTSTRAP TOOLTIP */
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+
     /* SWIPER PARALLAX */
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -24,11 +30,6 @@ $(document).ready(function () {
         grabCursor: true,
         speed: 600,
         loop: true
-    });
-
-    /* INIT BOOTSTRAP TOOLTIP */
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
     });
 
     /* INIT TEXT IN SWAP NEXT/PREV BTN  !!!TEST!!! */
@@ -55,5 +56,20 @@ $(document).ready(function () {
 
         prevBtn.html(prevBtnPagination);
         nextBtn.html(nextBtnPagination);
+    });
+
+
+    /* menu */
+    $(".btn_menu_js").on("click", function () {
+        var navContainer = $(".nav_row ");
+
+        navContainer.toggleClass("active");
+        $("body,html").toggleClass("open-menu");
+    });
+    $(".btn_close_js").on("click", function () {
+        var navContainer = $(".nav_row ");
+
+        navContainer.removeClass("active");
+        $("body,html").removeClass("open-menu");
     });
 });

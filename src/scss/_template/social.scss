@@ -10,7 +10,11 @@
 .social {
   float: right;
   // 24px - this is icons dimensions
-  margin-top: (71px - 24) / 2;
+  margin-top: (70px - 24) / 2;
+  @include respond-to(small-max) {
+    float: none;
+    margin-top: 15px;
+  }
 
 
   &__icon {

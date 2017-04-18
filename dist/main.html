@@ -14,7 +14,33 @@
   </head>
   <body>
     <!-- HEADER-->
-    <!--include _template/header-->
+    <header class="header">
+      <!-- top line gray-->
+      <div class="header_top"></div>
+      <div class="container_fluid container">
+        <div class="logotype"><img src="./image/logotype.png" title="" alt="" class="logotype__img img_responsive"></div>
+      </div>
+      <nav class="nav">
+        <!-- add two block for bg & bg image replay [pattern overlay]-->
+        <div class="nav_bgColor"></div>
+        <div class="nav_bgImage"></div>
+        <div class="container_fluid container clearfix">
+          <div class="nav_row clearfix">
+            <div class="nav_row--mobile"><a href="javascript:void(0);" title="CONTACT" class="nav__btn">CONTACT</a><a href="javascript:void(0);" title="MY PROFILE" class="nav__btn">MY PROFILE</a><a href="javascript:void(0);" title="ABOUT" class="nav__btn">ABOUT</a>
+            </div><a href="javascript:void(0);" title="Close menu" class="nav__btn-close btn_close_js"></a>
+          </div>
+          <div class="info">
+            <div role="group" class="clearfix"><span class="info__author">Logged in as <a href="javascript:void(0);" title="M van Beijnen, student" class="info__author-name">M van Beijnen, student</a></span><a href="javascript:void(0);" title="Open menu" class="btn__menu btn_menu_js">MENU</a><a href="javascript:void(0);" title="LOGOUT" class="btn__logout">LOGOUT</a>
+              <div class="info__row"><a href="javascript:void(0);" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn__flags"><i class="btn__flags-icon"></i></a>
+                <div class="dropdown-menu"><a href="javascript:void(0);" class="btn__drop"><span>Dutch</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- bottom line after navigation-->
+      <div class="header_bottom"></div>
+    </header>
     <!-- MAIN CONTAINER FOR OTHER MODULE-->
     <main class="main main_main">
       <div class="swiper-container">
@@ -26,7 +52,7 @@
                 <defs>
                   <linearGradient id="gradientText" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stop-color="#1899c8"></stop>
-                    <stop offset="100%" stop-color="#0c4e92"></stop>
+                    <stop offset="100%" stop-color="#0c4e9circle2"></stop>
                   </linearGradient>
                 </defs>
                 <text fill="url(#gradientText)" x="50%" y="50%">ACTIVITY
@@ -88,13 +114,24 @@
           <div class="swiper-slide"></div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"><span class="swiper-button-prev__text">Year Matrix</span></div>
-        <div class="swiper-button-next"><span class="swiper-button-next__text">EPA</span></div>
+        <div class="swiper-button-prev">
+          <!--span.swiper-button-prev__text!= "Year Matrix"-->
+        </div>
+        <div class="swiper-button-next">
+          <!--span.swiper-button-next__text!= "EPA"-->
+        </div>
       </div>
     </main>
     <!-- FOOTER-->
-    <!--include _template/footer-->
-    
+    <footer class="footer">
+      <div class="container_fluid container clearfix">
+        <div class="copyright">
+          <p class="copyright__text">&copy;&nbsp;EXPERTCOLLEGE 2017&nbsp;&nbsp;|&nbsp;&nbsp;ALLE RECHTEN VOORBEHOUDEN&nbsp;&nbsp;|&nbsp;&nbsp;DISCLAIMER</p>
+        </div>
+        <div class="social"><a href="javascript:void(0);" title="fb" class="social__icon social__icon-fb"></a><a href="javascript:void(0);" title="tw" class="social__icon social__icon-tw"></a><a href="javascript:void(0);" title="gp" class="social__icon social__icon-gp"></a><a href="javascript:void(0);" title="l" class="social__icon social__icon-l"></a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./vendor/js/jquery-1.11.1.min.js"></script>
   <script src="./vendor/js/bootstrap.min.js"></script>
