@@ -8,7 +8,7 @@
 ///
 .copyright {
   float: left;
-  line-height: 71px;
+  line-height: 70px;
   @include respond-to(small-max) {
     float: none;
     line-height: normal;
@@ -22,5 +22,31 @@
     letter-spacing: .5px;
     color: $c-light-grey;
     margin-bottom: 0;
+    @include respond-to(small-max) {
+      font-size: 11px;
+    }
+
+
+    &_wrap {
+      @include respond-to(small-max) {
+        display: block;
+      }
+    }
+  }
+
+
+  &__line {
+    font: {
+      size: 12px;
+    };
+    letter-spacing: .5px;
+    color: $c-light-grey;
+
+
+    &_0 {
+      @include respond-to(small-max) {
+        display: none;
+      }
+    }
   }
 }

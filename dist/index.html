@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>ExpertCollege login</title>
-    <!--link(rel="icon" type="image/png" href="./image/favicon.png")-->
+    <link rel="icon" type="image/png" href="./image/favicon.png"/>
     <link href="./vendor/css/swiper.css" rel="stylesheet"/>
     <link href="./style/bootstrap-dist.css" rel="stylesheet"/>
     <link href="./style/fonts.css" rel="stylesheet"/>
@@ -18,13 +18,13 @@
       <!-- top line gray-->
       <div class="header_top"></div>
       <div class="container_fluid container">
-        <div class="logotype"><img src="./image/logotype.png" title="" alt="" class="logotype__img img_responsive"></div>
+        <div class="logotype"><img src="./image/logotype.png" title="" alt="" class="logotype__img logotype__img_desktop img_responsive"><img src="./image/logotype-mobile.png" title="" alt="" class="logotype__img logotype__img_mobile img_responsive"></div>
       </div>
       <nav class="nav">
         <!-- add two block for bg & bg image replay [pattern overlay]-->
         <div class="nav_bgColor"></div>
         <div class="nav_bgImage"></div>
-        <div class="container_fluid container clearfix">
+        <div class="container_fluid container clearfix"><a href="javascript:void(0);" title="" class="btn-menu btn-menu_js btn__burger"><span class="btn-menu__line btn-menu__line-0"></span><span class="btn-menu__line btn-menu__line-1"></span><span class="btn-menu__line btn-menu__line-2"></span></a>
           <div class="nav_row clearfix">
             <div class="nav_row--mobile"><a href="javascript:void(0);" title="CONTACT" class="nav__btn">CONTACT</a><a href="javascript:void(0);" title="MY PROFILE" class="nav__btn">MY PROFILE</a><a href="javascript:void(0);" title="ABOUT" class="nav__btn">ABOUT</a>
             </div><a href="javascript:void(0);" title="Close menu" class="nav__btn-close btn_close_js"></a>
@@ -47,7 +47,7 @@
         <div class="panel-heading">Log In
         </div>
         <div class="panel-body">
-          <form id="loginform" name="loginForm" role="form" class="form-horizontal col-xs-offset-1 col-xs-10">
+          <form id="loginform" name="loginForm" role="form" class="form-horizontal col-sm-offset-1 col-sm-10 col-xs-12">
             <div class="form-group">
               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input id="login-username" autocomplete="on" type="email" name="email" placeholder="Input your e-mail" required class="form-control">
@@ -62,11 +62,12 @@
               <div class="btn-group btn-group_select">
                 <button type="button" data-toggle="dropdown" class="btn btn-default btn__select dropdown-toggle"><span class="btn__select-text disabled">Selecteer type account</span><span class="btn__select-caret--wrap "><span class="caret"></span></span></button>
                 <ul class="dropdown-menu dropdown-menu_full">
-                  <li><a href="javascript:void(0);" title="">0</a></li>
-                  <li><a href="javascript:void(0);" title="">1</a></li>
-                  <li><a href="javascript:void(0);" title="">2</a></li>
-                  <li><a href="javascript:void(0);" title="">3</a></li>
-                  <li><a href="javascript:void(0);" title="">4</a></li>
+                  <li><a href="javascript:void(0);" title="">Teacher</a></li>
+                  <li><a href="javascript:void(0);" title="">Student</a></li>
+                  <li><a href="javascript:void(0);" title="">Teacher Profile</a></li>
+                  <li><a href="javascript:void(0);" title="">Student Profile</a></li>
+                  <li><a href="javascript:void(0);" title="">Ultrasound...</a></li>
+                  <li><a href="javascript:void(0);" title="">Admin</a></li>
                 </ul>
               </div>
             </div>
@@ -81,9 +82,7 @@
     <!-- FOOTER-->
     <footer class="footer">
       <div class="container_fluid container clearfix">
-        <div class="copyright">
-          <p class="copyright__text">&copy;&nbsp;EXPERTCOLLEGE 2017&nbsp;&nbsp;|&nbsp;&nbsp;ALLE RECHTEN VOORBEHOUDEN&nbsp;&nbsp;|&nbsp;&nbsp;DISCLAIMER</p>
-        </div>
+        <div class="copyright"><span class="copyright__text copyright__text_wrap">&copy; EXPERTCOLLEGE 2017</span><span class="copyright__line copyright__line_0">  |  </span><a href="javascript:void(0);" title="ALLE RECHTEN VOORBEHOUDEN" class="copyright__text ">ALLE RECHTEN VOORBEHOUDEN</a><span class="copyright__line copyright__line_1">  |  </span><a href="javascript:void(0);" title="DISCLAIMER" class="copyright__text">DISCLAIMER</a></div>
         <div class="social"><a href="javascript:void(0);" title="fb" class="social__icon social__icon-fb"></a><a href="javascript:void(0);" title="tw" class="social__icon social__icon-tw"></a><a href="javascript:void(0);" title="gp" class="social__icon social__icon-gp"></a><a href="javascript:void(0);" title="l" class="social__icon social__icon-l"></a>
         </div>
       </div>

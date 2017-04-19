@@ -6,6 +6,52 @@ var arrPaginationName = [
     "Year Matrix"
 ];
 
+$(window).on("load resize ready scroll", function () {
+    var windowWidth = $(window).width();
+
+    if (windowWidth < "768") {
+        console.log('(windowWidth < "768")');
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            effect: 'cube',
+            grabCursor: true,
+            cube: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94
+            },
+            paginationClickable: true,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '" ' +
+                    'data-placement="top" ' +
+                    'data-toggle="tooltip" ' +
+                    'title="' + arrPaginationName[index] + '"></span>';
+            },
+            speed: 600,
+            loop: true
+        });
+    } else {
+        console.log('(windowWidth > "767")');
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '" ' +
+                    'data-placement="top" ' +
+                    'data-toggle="tooltip" ' +
+                    'title="' + arrPaginationName[index] + '"></span>';
+            },
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            effect: 'slide',
+            grabCursor: true,
+            speed: 600,
+            loop: true
+        });
+    }
+});
+
 $(document).ready(function () {
 
     /* INIT BOOTSTRAP TOOLTIP */
@@ -14,48 +60,23 @@ $(document).ready(function () {
     });
 
 
-    /* SWIPER PARALLAX */
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        paginationBulletRender: function (swiper, index, className) {
-            return '<span class="' + className + '" ' +
-                'data-placement="top" ' +
-                'data-toggle="tooltip" ' +
-                'title="' + arrPaginationName[index] + '"></span>';
-        },
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        effect: 'slide',
-        grabCursor: true,
-        speed: 600,
-        loop: true
+    /* BODY CLICK */
+    $('body').on('click', function (e) {
+        var className = "";
+
+        if (!$(e.target).closest(className).length) {
+        }
     });
 
-    /* INIT TEXT IN SWAP NEXT/PREV BTN  !!!TEST!!! */
-    $(".swiper-pagination-bullet").on("click", function(){
-        var currentPaginationBtn    = $(this).index(),
-            arrLen                  = arrPaginationName.length,
-            nextBtn                 = $(".swiper-button-next__text"),
-            prevBtn                 = $(".swiper-button-prev__text"),
-            nextBtnPagination, prevBtnPagination;
 
+    /* BTN BURGER */
+    $(".btn__burger").on("click", function () {
+        var navContainer = $(".nav_row ");
 
-        if(currentPaginationBtn === arrLen - 1) {
-            currentPaginationBtn = 0;
-            nextBtnPagination = arrPaginationName[currentPaginationBtn];
-            prevBtnPagination = arrPaginationName[arrLen - 2];
-        } else if(currentPaginationBtn === 0) {
-            prevBtnPagination = arrPaginationName[arrLen - 1];
-            nextBtnPagination = arrPaginationName[currentPaginationBtn + 1];
-        } else {
-            prevBtnPagination = arrPaginationName[currentPaginationBtn - 1];
-            nextBtnPagination = arrPaginationName[currentPaginationBtn + 1];
-        }
+        navContainer.toggleClass("active");
+        $(this).toggleClass("active");
 
-
-        prevBtn.html(prevBtnPagination);
-        nextBtn.html(nextBtnPagination);
+        $("body, html").toggleClass("open-menu");
     });
 
 
@@ -70,6 +91,7 @@ $(document).ready(function () {
         var navContainer = $(".nav_row ");
 
         navContainer.removeClass("active");
+        $(".btn__burger").removeClass("active");
         $("body,html").removeClass("open-menu");
     });
 });

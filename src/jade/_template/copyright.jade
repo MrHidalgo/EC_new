@@ -1,6 +1,25 @@
 -
-    var copyrightText = "&copy;&nbsp;EXPERTCOLLEGE 2017&nbsp;&nbsp;|&nbsp;&nbsp;ALLE RECHTEN VOORBEHOUDEN&nbsp;&nbsp;|&nbsp;&nbsp;DISCLAIMER";
+    var copyrightText   = "&copy; EXPERTCOLLEGE 2017",
+        copyrightLink1  = "ALLE RECHTEN VOORBEHOUDEN",
+        copyrightLink2  = "DISCLAIMER";
 
 
 .copyright
-    p.copyright__text!= copyrightText
+    span.copyright__text.copyright__text_wrap!= copyrightText
+
+    span.copyright__line.copyright__line_0!= "  |  "
+
+    a(
+        href="javascript:void(0);"
+        title="ALLE RECHTEN VOORBEHOUDEN"
+        class="copyright__text "
+    )!= copyrightLink1
+
+    span.copyright__line.copyright__line_1!= "  |  "
+
+    a(
+        href="javascript:void(0);"
+        title="DISCLAIMER"
+        class="copyright__text"
+    )!= copyrightLink2
+

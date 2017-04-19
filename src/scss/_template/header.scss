@@ -12,11 +12,17 @@
 ///
 .header {
   height: 102px;
+  @include respond-to(small-max) {
+    height: auto;
+  }
 
 
   &_top {
     @include mixinDimensions($w-all, 30px);
     background-color: $c-azure;
+    @include respond-to(small-max) {
+      height: auto;
+    }
 
 
     &+.container {

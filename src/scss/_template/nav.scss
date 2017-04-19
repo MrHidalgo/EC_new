@@ -3,6 +3,7 @@
 ///
 @import "../_mixin/mixin";
 @import "../_variable/variable";
+@import "../_variable/sprite";
 ///
 /// NAV
 ///
@@ -49,7 +50,8 @@
       top: 0;
       @include mixinDimensions($w-all);
       z-index: 100;
-      background-color: rgba(0,0,0,0.55);
+      background-color: rgba(0,0,0,0.65);
+      padding-left: 0;
       box-shadow: 2px 0 20px 0 rgba(0,0,0,.35);
 
 
@@ -67,6 +69,14 @@
         };
         @include mixinDimensions(($w-all / 2), $w-all);
         background-color: $c-white;
+        @include respond-to(small-max) {
+          // 15px padding + 34px width btn-burger
+          width: calc(100% - (15px + 15px + 34px));
+          padding: {
+            left: 15px;
+            right: 15px;
+          };
+        }
       }
 
 
@@ -95,7 +105,7 @@
       width: $w-all;
       font-size: 16px;
       color: $c-pacific-blue;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.19);
+      text-shadow: none;
       border-bottom: 1px solid $c-pacific-blue;
 
 
@@ -119,11 +129,25 @@
 
 
     &-close {
-      //display: none;
+      display: none;
       position: absolute;
-      left: 25%;
-      margin-left: -20px;
-      @include mixinDimensions(40px, 40px);
+      left: 50%;
+      margin: {
+        top: 10px;
+        left: -50px;
+      }
+      @include mixinDimensions(34px, 40px);
+      @include respond-to(small-max) {
+        display: none;
+      }
+
+
+      .nav_row.active & {
+        display: block;
+        @include respond-to(small-max) {
+          display: none;
+        }
+      }
 
 
       &:before,
@@ -132,7 +156,7 @@
         position: absolute;
         top: 20px;
         left: 0;
-        @include mixinDimensions($w-all, 2px);
+        @include mixinDimensions($w-all, 3px);
         background-color: $c-pacific-blue;
       }
 

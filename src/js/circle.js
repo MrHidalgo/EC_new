@@ -49,6 +49,17 @@ function drawCircle(selector, selectorNot, radius) {
 }
 
 
+$(window).on("load resize ready scroll", function(){
+    var windowWidth = $(window).width();
+
+    if(windowWidth > "767" && windowWidth < "992") {
+        drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 225);
+    } else if(windowWidth > "991") {
+        drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 300);
+    }
+});
+
+
 $(document).ready(function () {
-    drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 300);
+    // drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 300);
 });

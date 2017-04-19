@@ -1,13 +1,6 @@
 @import "../../../_mixin/mixin";
 @import "../../../_variable/variable";
 ///
-/// DECLARATION VARIABLE
-///
-$w-all              : return-value(dimension, all);
-
-$c-white			      : return-value(color, white);
-$c-nero 			      : return-value(color, nero);
-///
 /// MAIN
 ///
 .btn-menu {
@@ -15,6 +8,9 @@ $c-nero 			      : return-value(color, nero);
 
 
 	&.active {
+		z-index: 10000;
+
+
 		.btn-menu__line {
 			width: 34px;
 
@@ -52,7 +48,7 @@ $c-nero 			      : return-value(color, nero);
 	}
 	&:active {
 		.btn-menu__line {
-			background-color: $c-magenta;
+			//background-color: $c;
 		}
 	}
 

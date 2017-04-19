@@ -72,7 +72,11 @@ gulp.task(command.watch, function() {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./dist/"
+            baseDir: "./dist/",
+            //Route paths are not relative to the base directory
+            routes: {
+                '/main': './dist/main.html'
+            }
         },
         online      : true,
         notify      : true,

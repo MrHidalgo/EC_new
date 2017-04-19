@@ -7117,6 +7117,13 @@ button.list-group-item-danger.active:focus {
   margin: 50px 15px 30px;
 }
 
+@media screen and (max-width: 767px) {
+  
+  .panel_custom {
+    margin-top: 30px;
+  }
+}
+
 
 .panel_small {
   max-width: 650px;
@@ -7139,6 +7146,22 @@ button.list-group-item-danger.active:focus {
   clear: both;
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  
+  .panel-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .panel-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 
 .panel-heading,
 .panel-footer {
@@ -7157,6 +7180,15 @@ button.list-group-item-danger.active:focus {
           border-top-right-radius: 3px;
   -webkit-border-top-left-radius: 3px;
           border-top-left-radius: 3px;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .panel-heading {
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+  }
 }
 
 

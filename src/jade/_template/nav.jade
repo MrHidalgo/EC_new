@@ -1,13 +1,22 @@
+include ../_mixin/mixin
+
 -
     var navArr = [
         "CONTACT",
         "MY PROFILE",
         "ABOUT"
     ];
+    var navArrClass = [
+        "contact",
+        "profile",
+        "about"
+    ];
 
 
++btnMenuBurger("btn__burger")
 
 .nav_row.clearfix
+
     .nav_row--mobile
         -for(var i = 0; i < navArr.length; i++)
             a(
