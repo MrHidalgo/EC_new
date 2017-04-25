@@ -9,7 +9,8 @@
 function drawCircle(selector, selectorNot, radius) {
     // CONST
     var CIRCLE_DIMENSION_BIG        = 140,
-        CIRCLE_DIMENSION_MEDIUM     = 120;
+        CIRCLE_DIMENSION_MEDIUM     = 120,
+        CIRCLE_DIMENSION_SMALL      = 100;
 
     // VAR
     var total   = $(selector).not(selectorNot).length,
@@ -23,14 +24,22 @@ function drawCircle(selector, selectorNot, radius) {
             transformTranslateAfter     = "translate(" + radius + "px)",
             transformTranslateBefore    = "translate(0,-" + radius + "px)";
 
+        var offsetMargin;
+
         var transform,
-            widthHeightDimension;
+            widthHeightDimension,
+            marginLeftTop;
 
         // dimension block
-        if(total <= 10) {
+        if(total <= 8) {
             widthHeightDimension    = "width:" + CIRCLE_DIMENSION_BIG + "px;height:" + CIRCLE_DIMENSION_BIG + "px;";
-        } else {
+            offsetMargin            = CIRCLE_DIMENSION_BIG / 2;
+        } else if (total > 8 && total < 13) {
             widthHeightDimension    = "width:" + CIRCLE_DIMENSION_MEDIUM + "px;height:" + CIRCLE_DIMENSION_MEDIUM + "px;";
+            offsetMargin            = CIRCLE_DIMENSION_MEDIUM / 2;
+        } else {
+            widthHeightDimension    = "width:" + CIRCLE_DIMENSION_SMALL + "px;height:" + CIRCLE_DIMENSION_SMALL + "px;";
+            offsetMargin            = CIRCLE_DIMENSION_SMALL / 2;
         }
 
         // transform function
@@ -40,8 +49,11 @@ function drawCircle(selector, selectorNot, radius) {
             transform = "transform:" + transformRotatePositive + " " + transformTranslateAfter + " " + transformRotateNegative;
         }
 
+        // offset
+        marginLeftTop = "margin-top:-" + offsetMargin + "px;margin-left:-" + offsetMargin + "px;";
+
         // add style attr
-        $(this).attr('style', transform + "" + widthHeightDimension);
+        $(this).attr('style', transform + "" + widthHeightDimension + "" + marginLeftTop + "");
 
         // inc rotate
         rotate += angle;
@@ -57,9 +69,4 @@ $(window).on("load resize ready scroll", function(){
     } else if(windowWidth > "991") {
         drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 300);
     }
-});
-
-
-$(document).ready(function () {
-    // drawCircle(".swiper-slide .circle__block", ".swiper-slide-duplicate .circle__block", 300);
 });
