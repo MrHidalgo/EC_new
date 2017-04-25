@@ -133,6 +133,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #315477;
+  background-image: url("../image/img-login-bg.png");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -143,6 +144,7 @@ body {
 .main_main {
   position: relative;
   padding: 90px 70px 70px;
+  background-image: url("../image/img-main-bg.png");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;

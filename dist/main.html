@@ -13,10 +13,34 @@
     <link href="./style/common.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- HEADER
-    include _template/header
-    
-    -->
+    <!-- HEADER-->
+    <header class="header">
+      <!-- top line gray-->
+      <div class="header_top"></div>
+      <div class="container_fluid container">
+        <div class="logotype"><img src="./image/logotype.png" title="" alt="" class="logotype__img logotype__img_desktop img_responsive"><img src="./image/logotype-mobile.png" title="" alt="" class="logotype__img logotype__img_mobile img_responsive"></div>
+      </div>
+      <nav class="nav">
+        <!-- add two block for bg & bg image replay [pattern overlay]-->
+        <div class="nav_bgColor"></div>
+        <div class="nav_bgImage"></div>
+        <div class="container_fluid container clearfix"><a href="javascript:void(0);" title="" class="btn-menu btn-menu_js btn__burger"><span class="btn-menu__line btn-menu__line-0"></span><span class="btn-menu__line btn-menu__line-1"></span><span class="btn-menu__line btn-menu__line-2"></span></a>
+          <div class="nav_row clearfix">
+            <div class="nav_row--mobile"><a href="javascript:void(0);" title="CONTACT" class="nav__btn">CONTACT</a><a href="javascript:void(0);" title="MY PROFILE" class="nav__btn">MY PROFILE</a><a href="javascript:void(0);" title="ABOUT" class="nav__btn">ABOUT</a>
+            </div><a href="javascript:void(0);" title="Close menu" class="nav__btn-close btn_close_js"></a>
+          </div>
+          <div class="info">
+            <div role="group" class="clearfix"><span class="info__author">Logged in as <a href="javascript:void(0);" title="M van Beijnen, student" class="info__author-name">Franciscus van der Zee, student</a></span><a href="javascript:void(0);" title="Open menu" class="btn__menu btn_menu_js">MENU</a><a href="javascript:void(0);" title="LOGOUT" class="btn__logout">LOGOUT</a>
+              <div class="info__row"><a href="javascript:void(0);" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn__flags"><i class="btn__flags-icon"></i></a>
+                <div class="dropdown-menu"><a href="javascript:void(0);" class="btn__drop"><span>Dutch</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- bottom line after navigation-->
+      <div class="header_bottom"></div>
+    </header>
     <!-- MAIN CONTAINER FOR OTHER MODULE-->
     <main class="main main_main">
       <div class="swiper-container">
@@ -89,20 +113,23 @@
           <div class="swiper-slide"></div>
           <div class="swiper-slide"></div>
         </div>
-        <!--.swiper-pagination-->
-        <!--.swiper-button-prev
-        //span.swiper-button-prev__text!= "Year Matrix"
-        
-        -->
-        <!--.swiper-button-next//span.swiper-button-next__text!= "EPA"
-        -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <!--span.swiper-button-prev__text!= "Year Matrix"-->
+        </div>
+        <div class="swiper-button-next">
+          <!--span.swiper-button-next__text!= "EPA"-->
+        </div>
       </div>
     </main>
-    <!-- FOOTER
-    include _template/footer
-    
-    
-    -->
+    <!-- FOOTER-->
+    <footer class="footer">
+      <div class="container_fluid container clearfix">
+        <div class="copyright"><span class="copyright__text copyright__text_wrap">&copy; EXPERTCOLLEGE 2017</span><span class="copyright__line copyright__line_0">  |  </span><a href="javascript:void(0);" title="ALLE RECHTEN VOORBEHOUDEN" class="copyright__text ">ALLE RECHTEN VOORBEHOUDEN</a><span class="copyright__line copyright__line_1">  |  </span><a href="javascript:void(0);" title="DISCLAIMER" class="copyright__text">DISCLAIMER</a></div>
+        <div class="social"><a href="javascript:void(0);" title="fb" class="social__icon social__icon-fb"></a><a href="javascript:void(0);" title="tw" class="social__icon social__icon-tw"></a><a href="javascript:void(0);" title="gp" class="social__icon social__icon-gp"></a><a href="javascript:void(0);" title="l" class="social__icon social__icon-l"></a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./vendor/js/jquery-1.11.1.min.js"></script>
   <script src="./vendor/js/bootstrap.min.js"></script>
